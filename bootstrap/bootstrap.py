@@ -68,7 +68,7 @@ def validate_host():
     Make sure TLJH is installable in current host
     """
     # Support only Ubuntu 18.04+
-    distro = get_os_release_variable('ID')
+    distro = get_os_release_variable('ID_LIKE')
     version = float(get_os_release_variable('VERSION_ID'))
     if distro != 'ubuntu':
         print('The Littlest JupyterHub currently supports Ubuntu Linux only')
